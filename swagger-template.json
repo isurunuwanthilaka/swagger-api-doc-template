@@ -1,0 +1,64 @@
+{
+   "swagger":"2.0",
+   "info":{
+      "title":"X API set",
+      "description":"This is a basic design before implementation, subjected to change.",
+      "version":"1.0.0"
+   },
+   "tags":[
+      {
+         "name":"API set",
+         "description":"This package includes the APIs design"
+      }
+   ],
+   "paths":{
+      "/v1/x":{
+         "get":{
+            "tags":[
+               "API set"
+            ],
+            "summary":"Returns x",
+            "parameters":[
+               {
+                  "name":"param1",
+                  "in":"query",
+                  "description":"param1",
+                  "required":false,
+                  "type":"string"
+               },
+               {
+                  "name":"param2",
+                  "in":"query",
+                  "description":"param2",
+                  "required":false,
+                  "type":"string"
+               }
+            ],
+            "responses":{
+               "200":{
+                  "description":"Response",
+                  "schema":{
+                     "type":"array",
+                     "items":{
+                        "$ref":"#/definitions/Dto"
+                     }
+                  }
+               }
+            }
+         }
+      }
+   },
+   "definitions":{
+      "Dto":{
+         "type":"object",
+         "properties":{
+            "param1":{
+               "type":"string"
+            },
+            "param2":{
+               "type":"string"
+            }
+         }
+      }
+   }
+}
